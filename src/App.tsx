@@ -23,7 +23,7 @@ function App() {
                        collapsed={accordionCollapsed}
                        onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
 
-            <UncontrolledRaiting/>
+            <UncontrolledRaiting onChange={()=>{}} />
             <Raiting value={ratingValue} onClickHandler={setRatingValue}/>
 
             <UncontrolledOnOff onChange={setSwitchOn} /> {switchOn.toString()}
