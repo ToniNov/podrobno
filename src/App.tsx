@@ -19,9 +19,20 @@ function App() {
         <PageTitle title={"MY APP COMPONENT"}/>
 
             <UncontrolledAccordion titleValue={"MENU"} />
-            <Accordion titleValue={"SETTINGS"}
+            // говно код
+            <Accordion items={[
+                {title: "Видео", value: 1},
+                {title: "Картинки", value: 2},
+                {title: "Новости", value: 3},
+                {title: "Карты", value: 4},]}
+                       onClick={(value) => {
+                           alert(`You change ${value}`)
+                       }}
+                       titleValue={"SETTINGS"}
                        collapsed={accordionCollapsed}
-                       onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
+                       onChange={() => {
+                           setAccordionCollapsed(!accordionCollapsed)
+                       }}/>
 
             <UncontrolledRaiting onChange={()=>{}} />
             <Raiting value={ratingValue} onClickHandler={setRatingValue}/>
